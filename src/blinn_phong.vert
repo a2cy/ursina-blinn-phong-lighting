@@ -1,7 +1,7 @@
 #version 150
 
 uniform mat4 p3d_ModelViewProjectionMatrix;
-uniform mat4 p3d_ModelMatrixInverse;
+uniform mat4 p3d_ModelMatrix;
 
 in vec4 p3d_Vertex;
 in vec3 p3d_Normal;
@@ -15,5 +15,5 @@ void main() {
     gl_Position = p3d_ModelViewProjectionMatrix * p3d_Vertex;
 
     texcoord = p3d_MultiTexCoord0;
-    normal = mat3(transpose(p3d_ModelMatrixInverse)) * p3d_Normal;
+    normal = normalize(mat3(p3d_ModelMatrix) * p3d_Normal);
 }
