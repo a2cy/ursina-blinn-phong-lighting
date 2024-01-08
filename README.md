@@ -1,2 +1,2 @@
-# ursina-phong-lighting
-Phong lighting in ursina game engine
+# ursina-blinn-phong-lighting
+Blinn phong lighting in ursina game engine
