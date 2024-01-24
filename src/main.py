@@ -14,7 +14,6 @@ if __name__ == "__main__":
 
     def update():
         sphere.set_shader_input("u_light_position", light.world_position)
-        sphere.set_shader_input("u_resolution", window.size)
 
         sphere.rotate(Vec3(0, .5, 0))
 
