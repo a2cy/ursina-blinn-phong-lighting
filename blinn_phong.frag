@@ -23,7 +23,7 @@ void main() {
 
     vec4 ambient_light = ambient_color * color;
     vec4 diffuse_light = max(dot(normal, light_direction), 0.0) * color;
-    vec4 specular_light = pow(max(dot(normal, half_direction), 0.0), 32.0) * light_color;
+    vec4 specular_light =  0.25 * pow(max(dot(normal, half_direction), 0.0), 32.0) * light_color;
 
     color = ambient_light + diffuse_light + specular_light;
 
