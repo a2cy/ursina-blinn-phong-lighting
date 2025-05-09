@@ -4,6 +4,7 @@ uniform mat4 p3d_ModelViewProjectionMatrix;
 uniform mat4 p3d_ModelViewMatrix;
 uniform mat3 p3d_NormalMatrix;
 uniform mat4 p3d_ViewMatrix;
+uniform vec3 u_light_position;
 
 
 in vec4 p3d_Vertex;
@@ -21,6 +22,6 @@ void main() {
 
     texcoord = p3d_MultiTexCoord0;
     fragcoord = vec3(p3d_ModelViewMatrix * p3d_Vertex);
-    light_pos = vec3(p3d_ViewMatrix * vec4(2.0, 4.0, 2.0, 1.0));
+    light_pos = vec3(p3d_ViewMatrix * vec4(u_light_position, 1.0));
     normal = normalize(p3d_NormalMatrix * p3d_Normal);
 }

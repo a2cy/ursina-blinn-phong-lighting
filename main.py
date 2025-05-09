@@ -15,6 +15,8 @@ if __name__ == "__main__":
     EditorCamera()
 
     def update():
+        ground.set_shader_input("u_light_position", light.world_position)
+        sphere.set_shader_input("u_light_position", light.world_position)
         sphere.rotate(Vec3(0, .5, 0))
 
     app.run()
