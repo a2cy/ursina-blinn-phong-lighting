@@ -18,7 +18,6 @@ void main() {
     vec3 ambient_color = vec3(0.2, 0.2, 0.2);
     vec3 light_color = vec3(1.0);
     float shininess = 128.0;
-    float gamma = 2.2;
 
     vec3 color = vec3(texture(p3d_Texture0, texcoord) * p3d_ColorScale * vertex_color);
     vec3 specular_color = vec3(texture(specular_map, texcoord));
